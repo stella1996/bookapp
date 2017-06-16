@@ -39,8 +39,9 @@ public class UserController {
 	
 	@PostMapping("/validate")
 	
-	public String findByEmailAndPassword(User user)
+	public String findByEmailAndPassword(@RequestParam("email") String email,@RequestParam("password") String password)
 	{
+		User user =userRepo.findByEmailAndPassword(email, password);
 		
  if(user!=null)
  {
@@ -50,7 +51,7 @@ public class UserController {
  else
  {
 	 System.out.println("invalid user");
-	 return "display";
+	 return "register";
  }
 
 		
