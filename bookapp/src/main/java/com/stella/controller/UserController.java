@@ -2,6 +2,7 @@ package com.stella.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +16,7 @@ import com.stella.repository.UserRepository;
 public class UserController {
 
 	@Autowired
-	private UserRepository userRepo;
+	 UserRepository userRepo;
 
 	@PostMapping("/save")
 	public String save(@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("password") String password) {
@@ -28,5 +29,30 @@ public class UserController {
 
 		return "welcome";
 	}
+	
+	@GetMapping("/login")
+	public String login()
+	{
+		return "login";
+	}
+	
+	
+	@PostMapping("/validate")
+	
+	public String findByEmailAndPassword(User user)
+	{
+		
+ if(user!=null)
+ {
+	 System.out.println("valid user");
+	 return "book";
+ }
+ else
+ {
+	 System.out.println("invalid user");
+	 return "display";
+ }
 
+		
+}
 }

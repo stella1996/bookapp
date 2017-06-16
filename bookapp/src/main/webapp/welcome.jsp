@@ -8,6 +8,8 @@
 <title>welcome page</title>
 </head>
 <body>
-	<h1>hello</h1>
+	<h1>Hello user You have successfully registered.Click below to login</h1>
+		<a href="/users/login">Login</a> <br/>
+	
 </body>
 </html>
