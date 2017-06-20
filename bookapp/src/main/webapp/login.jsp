@@ -1,33 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>User Login</title>
 </head>
-<body>
+<body bgcolor="#33FF00">
+<br><br><br>
+<center>
+	<h1 style="color:#CC0099;font-size:40px">User Login</h1>
+	<br><br><br>
+
 <form action="/users/validate" method="POST">
-		<table border="1">
+		<table style="color:#00FF33;border-color:#FF0099;background-color:#CC0099;" border="1">
 			<tbody>
 				
 				<tr>
-					<th>Email</th>
-					<td><input type="email" name="email" required="required" />
+					<th style="font-size:30px">Email</th>
+					<td><input style="height:30px;width:330px" type="email" name="email" required="required" />
 					</td>
 				</tr>
 				<tr>
-					<th>Password</th>
-					<td><input type="password" name="password" required="required" />
+					<th style="font-size:30px">Password</th>
+					<td><input style="height:30px;width:330px" type="password" name="password" required="required" />
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<button type="submit">Submit</button>
+						<button style="height:30px;width:130px" type="submit">Submit</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
+		</form>
+		</center>
 
 </body>
 </html>

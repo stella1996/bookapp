@@ -1,35 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>User Registration</title>
+
 </head>
-<body>
+<body bgcolor="#33FF00">
 <center>
-	<h1>User Registration</h1>
+	<h1 style="color:#CC0099;font-size:40px">User Registration</h1>
+	<br><br>
 	<form action="/users/save" method="POST">
-		<table border="1">
+		<table style="color:#00FF33;border-color:#FF0099;background-color:#CC0099;" border="1">
 			<tbody>
 				<tr>
-					<th>Name</th>
-					<td><input type="text" name="name" required="required"
+					<th style="font-size:30px">Name</th>
+					<td><input style="height:30px;width:330px" type="text" name="name" required="required"
 						autofocus="autofocus" /></td>
 				</tr>
 				<tr>
-					<th>Email</th>
-					<td><input type="email" name="email" required="required" />
+					<th style="font-size:30px" >Email</th>
+					<td><input style="height:30px;width:330px" type="email" name="email" required="required" />
 					</td>
 				</tr>
 				<tr>
-					<th>Password</th>
-					<td><input type="password" name="password" required="required" />
+					<th style="font-size:30px" >Password</th>
+					<td><input style="height:30px;width:330px" type="password" name="password" required="required" />
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<button type="submit">Submit</button>
+						<center><button style="height:30px;width:130px" type="submit">Submit</button><center>
 					</td>
 				</tr>
 			</tbody>
