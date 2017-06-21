@@ -42,6 +42,7 @@ public class BookController {
 		System.out.println("ShowBook:" + id);
 		
 		Book book =bookService.findOne(id);
+		session.setAttribute("book",book);
 		modelMap.addAttribute("BOOK_ORDER", book);
 
 		return "show";

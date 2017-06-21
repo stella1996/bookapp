@@ -8,25 +8,17 @@ import org.springframework.stereotype.Service;
 import com.stella.model.Book;
 import com.stella.repository.BookRepository;
 
-
 @Service
 public class BookService {
-    @Autowired
+	@Autowired
 	private BookRepository bookRepo;
-	public List<Book> findAll(){
+
+	public List<Book> findAll() {
 		return bookRepo.findAll();
 	}
-	
-	public  Book findOne(Long id){
+
+	public Book findOne(Long id) {
 		return bookRepo.findOne(id);
 	}
-	
 
-	
 }
-
-
-	
-	
-	
-

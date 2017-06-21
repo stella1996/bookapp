@@ -12,34 +12,31 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="order_items")
+@Table(name = "order_items")
 public class OrderItem {
 	@Id
-    @GeneratedValue
-	@Column(name="id")
+	@GeneratedValue
+	@Column(name = "id")
 	private Long id;
-    
-    
-    @ManyToOne
-	@JoinColumn(name="order_id")
-	private Order order;
-    
-    
+
 	@ManyToOne
-	@JoinColumn(name="book_id")
+	@JoinColumn(name = "order_id")
+	private Order order;
+
+	@ManyToOne
+	@JoinColumn(name = "book_id")
 	private Book book;
-    
-    @Column(name="quantity")
+
+	@Column(name = "quantity")
 	private Integer quantity;
-    
-	@Column(name="ordered_date")
-	private LocalDateTime ordered_date;
+
+	@Column(name = "ordered_date")
+	private LocalDateTime orderedDate;
+
 	@Override
 	public String toString() {
 		return "OrderItem [id=" + id + ", order=" + order + ", book=" + book + ", quantity=" + quantity
-				+ ", ordered_date=" + ordered_date + "]";
+				+ ", ordered_date=" + orderedDate + "]";
 	}
 
-	
-	
 }
