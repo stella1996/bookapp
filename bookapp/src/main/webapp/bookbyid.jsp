@@ -1,22 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Book Management System</title>
 </head>
 <body bgcolor="#33FF00">
-<center>
-	
-	<br><br><br>
-<h1 style="color:#CC0099;font-size:30px" > BOOK MANAGEMENT SYSTEM</h1>
-<h1 style="color:#CC0099;font-size:40px">Book List</h1>
+<CENTER>
+<br><br>
+<h1 style="color:#CC0099;font-size:30px" >HAI,USER WELCOME TO BOOK MANAGEMENT SYSTEM</h1>
+</CENTER>
 
-
-
-
-	<table style="color:#00FF33;border-color:#FF0099;background-color:#CC0099;" border="1">
+<table style="color:#00FF33;border-color:#FF0099;background-color:#CC0099;" border="1">
 		<thead>
 			<tr>
 				<th  style="font-size:30px" >Id</th>
@@ -31,13 +26,11 @@
 				<td >${book.id}</td>
 				<td >${book.name}</td>
 				<td >${book.price}</td>
-				<td >${book.released_date}</td>
-				<td><a href="../books/${book.id}">View</a>
+				
 				
 			</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	</CENTER>
 </body>
 </html>
