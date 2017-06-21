@@ -13,6 +13,11 @@
 
 <form action="/books/list">
 	<input  style="color:#CC0099;font-size:36px" type="submit" name="listallbooks" value="listallbooks">
+	
+	</form>
+	<form action="/books/id">
+	<input  style="color:#CC0099;font-size:36px" type="submit" name="listallbooks" value="place an order">
+	
 	</form>
 </body>
 </html>

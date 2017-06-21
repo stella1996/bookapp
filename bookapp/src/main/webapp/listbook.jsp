@@ -32,6 +32,7 @@
 				<td >${book.name}</td>
 				<td >${book.price}</td>
 				<td >${book.released_date}</td>
+				<td><a href="../orders/books?id=${book.id}">View</a>
 				
 			</tr>
 			</c:forEach>

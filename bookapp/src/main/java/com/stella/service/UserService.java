@@ -12,16 +12,19 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepo;
 	
-	public String save(@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("password") String password) {
+	
+	public String save(@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("password") String password) throws Exception {
 		User user=new User();
 		user.setEmail(email);
 		user.setName(name);
         user.setPassword(password);
 		System.out.println("New User Detail  " + user);
 		userRepo.save(user);
-
+		
 		return "welcome";
 	}
+	
+	
 	
 
 }

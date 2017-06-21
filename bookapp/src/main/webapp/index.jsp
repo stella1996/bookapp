@@ -16,6 +16,9 @@
 	<form action="register.jsp">
 	<input  style="color:#FF0000;font-size:36px" type="submit" name="register" value="REGISTER">
 	</form>
+	<form action="login.jsp">
+	<input  style="color:#FF0000;font-size:36px" type="submit" name="register" value="LOGIN">
+	</form>
 	</body>
 	</center>
 </html>

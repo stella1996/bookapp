@@ -1,5 +1,7 @@
 package com.stella.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -18,44 +20,37 @@ import com.stella.service.UserService;
 public class UserController {
 
 	@Autowired
-	 UserRepository userRepo;
+	UserRepository userRepo;
 	@Autowired
-	 UserService userService;
+	UserService userService;
 
 	@PostMapping("/save")
-	public String save(@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("password") String password) {
-		
-return userService.save(name, email, password);
+	public String save(@RequestParam("name") String name, @RequestParam("email") String email,
+			@RequestParam("password") String password) throws Exception {
 
+		return userService.save(name, email, password);
 
-		
-	
 	}
-	
+
 	@GetMapping("/login")
-	public String login()
-	{
+	public String login() {
 		return "login";
 	}
-	
-	
-	@PostMapping("/validate")
-	
-	public String findByEmailAndPassword(@RequestParam("email") String email,@RequestParam("password") String password)
-	{
-		User user =userRepo.findByEmailAndPassword(email, password);
-		
- if(user!=null)
- {
-	 System.out.println("valid user");
-	 return "book";
- }
- else
- {
-	 System.out.println("invalid user");
-	 return "register";
- }
 
-		
-}
+	@PostMapping("/validate")
+
+	public String findByEmailAndPassword(@RequestParam("email") String email,
+			@RequestParam("password") String password ,HttpSession session) {
+		User user = userRepo.findByEmailAndPassword(email, password);
+
+		if (user != null) {
+			System.out.println("valid user");
+			session.setAttribute("u","user");
+			return "book";
+		} else {
+			System.out.println("invalid user");
+			return "register";
+		}
+
+	}
 }
