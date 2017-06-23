@@ -19,5 +19,9 @@
 	<input  style="color:#CC0099;font-size:36px" type="submit" name="listallbooks" value="place an order">
 	
 	</form>
+	<form action="/order/list">
+		<input  style="color:#CC0099;font-size:36px" type="submit" name="listallbooks" value="listallorders">
+	
+	</form>
 </body>
 </html>

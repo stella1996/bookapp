@@ -2,12 +2,15 @@ package com.stella.model;
 
 import java.time.LocalDate;
 
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -30,7 +33,7 @@ public class Order {
 	@Column(name = "total_price")
 	private Integer totalPrice;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "order", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<OrderItem> orderItems = new ArrayList<>();
 
 	@Column(name = "ordered_date")
